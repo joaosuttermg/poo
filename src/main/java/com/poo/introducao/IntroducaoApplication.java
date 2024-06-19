@@ -6,11 +6,23 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class IntroducaoApplication {
 
+
+
 	public static void main(String[] args) {
 		SpringApplication.run(IntroducaoApplication.class, args);
-
-		Lista1 lista = new Lista1() ;
-		lista.ex1();
+		
+		try {
+            if (System.getProperty("os.name").contains("Windows")) {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } else {
+                System.out.println("Este comando só funciona no Windows.");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+		
+		Lista2 lista = new Lista2() ;
+		lista.ex5();
 	}
 
 }
