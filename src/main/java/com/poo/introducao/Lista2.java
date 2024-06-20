@@ -183,40 +183,6 @@ public class Lista2 {
         sc.close();
 
     }
-    public void ex8(){
-        Scanner scanner = new Scanner(System.in);
-        int acertos = 0;
-        int erros = 0;
+    
 
-        String[][] perguntas = {
-            {"Qual é a capital do Brasil?", "a) São Paulo", "b) Rio de Janeiro", "c) Brasília", "c"},
-            {"Quem pintou a Mona Lisa?", "a) Michelangelo", "b) Leonardo da Vinci", "c) Pablo Picasso", "b"},
-            // Adicione mais perguntas aqui
-        };
-
-        for (String[] pergunta : perguntas) {
-            System.out.println(pergunta[0]);
-            for (int i = 1; i < pergunta.length - 1; i++) {
-                System.out.println(pergunta[i]);
-            }
-            String respostaUsuario = scanner.nextLine().toLowerCase();
-            if (respostaUsuario.equals(pergunta[pergunta.length - 1])) {
-                acertos++;
-                System.out.println("Resposta correta!\n");
-            } else {
-                erros++;
-                System.out.println("Resposta incorreta!\n");
-                if (erros >= 3) {
-                    System.out.println("Você perdeu o jogo!");
-                    break;
-                }
-            }
-        }
-
-        if (erros < 3) {
-            System.out.println("Parabéns! Você acertou " + acertos + " perguntas.");
-        }
-    }
-    }
-
-
+}
