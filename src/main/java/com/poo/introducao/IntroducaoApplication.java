@@ -22,7 +22,7 @@ public class IntroducaoApplication {
         }
 		
 		Lista3 lista = new Lista3() ;
-		lista.ex5();
+		lista.ex7();
 	}
 
 }

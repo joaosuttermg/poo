@@ -2,8 +2,6 @@ package com.poo.introducao;
 
 import java.util.Scanner;
 
-import javax.sound.sampled.SourceDataLine;
-
 public class Lista3 {
     public void ex2() {
 
@@ -19,6 +17,7 @@ public class Lista3 {
             System.out.println(numero + " * " + i + " = " + (numero * i));
             i++;
         }
+        scanner.close();
     }
 
     public void ex3() {
@@ -38,7 +37,7 @@ public class Lista3 {
             }
 
         }
-
+        sc.close();
     }
 
     public void ex4() {
@@ -62,7 +61,7 @@ public class Lista3 {
         } else {
             System.out.println("parabéns! você acertou");
         }
-
+        sc.close();
     }
 
     public void ex5() {
@@ -78,20 +77,22 @@ public class Lista3 {
         System.out.println("cadastre sua senha: ");
         senhacadastrada = sc.nextLine();
 
-        
-
-        while (tentativas <= 2) {System.out.println("digite seu email: ");
-        emaildigitado = sc.nextLine();
+        while (tentativas <= 2) {
+            System.out.println("digite seu email: ");
+            emaildigitado = sc.nextLine();
             if (emaildigitado.equals(emailcadastrado)) {
                 System.out.println("digite sua senha: ");
             } else {
                 System.out.println("email incorreto.");
-                
-                tentativas++;
 
-            }}while ((tentativas <=2)) {
-                
-            
+                tentativas++;
+                if (tentativas == 2) {
+                    System.out.println("cuidado, é sua ultima tentativa");
+                }
+
+            }
+        }
+        while ((tentativas <= 2)) {
 
             senhadigitada = sc.nextLine();
 
@@ -102,9 +103,44 @@ public class Lista3 {
                 tentativas++;
                 if (tentativas == 2) {
                     System.out.println("cuidado, é sua ultima tentativa");
+                    sc.close();
                 }
             }
         }
     }
-}
 
+    public void ex6() {
+
+        int andares;
+        System.out.println("quantos andares?: ");
+        Scanner sc = new Scanner(System.in);
+        andares = sc.nextInt();
+
+        for (int i = 1; i <= andares; i++) {
+            for (int k = 1; k <= (andares - i); k++) {
+                System.out.println(" ");
+            }
+            for (int j = 1; j <= i * 2 - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public void ex7() {
+
+        int largura;
+        int altura;
+        System.out.println("largura do retangulo: ");
+        Scanner sc = new Scanner(System.in);
+        largura = sc.nextInt();
+        System.out.println("e a altura?: ");
+        altura = sc.nextInt();
+        for (int j = 0; j < altura; j++) {
+            for (int i = 0; i < largura; i++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
