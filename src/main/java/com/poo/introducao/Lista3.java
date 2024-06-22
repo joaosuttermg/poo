@@ -125,7 +125,7 @@ public class Lista3 {
             }
             System.out.println();
         }
-    }
+    sc.close();}
 
     public void ex7() {
 
@@ -142,5 +142,5 @@ public class Lista3 {
             }
             System.out.println();
         }
-    }
+    sc.close();}
 }

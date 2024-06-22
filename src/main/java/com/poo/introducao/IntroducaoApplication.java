@@ -21,8 +21,8 @@ public class IntroducaoApplication {
             e.printStackTrace();
         }
 		
-		Lista3 lista = new Lista3() ;
-		lista.ex7();
+		Lista4 lista = new Lista4() ;
+		lista.ex8();
 	}
 
 }
