@@ -8,6 +8,12 @@ public class ClassesApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ClassesApplication.class, args);
+
+		Pessoa pessoa = new Pessoa(null, 0, null, null);
+		Criadora criadora = new Criadora(null);
+		Endereco endereco = new Endereco(null, null, null, null);
 	}
+
+	
 
 }
